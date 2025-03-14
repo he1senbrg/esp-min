@@ -50,3 +50,6 @@ SECTIONS {
   /DISCARD/ : { *(.debug) *(.debug*) *(.xtensa.*) *(.comment) }
   */
 }
+
+PROVIDE(memcpy = 0x4000c2c8);
+PROVIDE(printf = 0x40007d54);
