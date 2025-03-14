@@ -25,5 +25,8 @@ flash: $(PROG).bin
 erase:
 	esptool.py --chip esp32 erase_flash
 
+monitor:
+	picocom -b 115200 /dev/ttyUSB0
+
 clean:
 	@rm -rf build/ $(PROG)*
